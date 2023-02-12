@@ -2,6 +2,8 @@ package net.fabricmc.infernal_war;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.infernal_war.item.PigIron;
 import net.fabricmc.infernal_war.item.RegisterItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,12 +16,7 @@ public class InfernalWar implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("infernalwar");
-
-	public static final ItemGroup EXAMPLE_MOD_GROUP = FabricItemGroup.builder(
-    new Identifier("tutorial", "example_mod_group"))
-    .icon(() -> new ItemStack(RegisterItems.PIG_IRON)) // This uses the model of the new material you created as an icon, but you can reference to whatever you like
-    .build();
+	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
 	@Override
 	public void onInitialize() {
@@ -27,6 +24,7 @@ public class InfernalWar implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		RegisterItems.register();
+		InfernalWarGroup.modifyEntryEvents();
 
 		LOGGER.info("The Piglins will rise...");
 	}

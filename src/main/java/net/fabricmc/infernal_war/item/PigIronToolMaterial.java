@@ -9,12 +9,12 @@ public class PigIronToolMaterial implements ToolMaterial{
 
     @Override
     public int getDurability() {
-        return 0;
+        return 750;
     }
 
     @Override
     public float getAttackDamage() {
-        return 4.0F;
+        return 3.5F;
     }
 
     @Override
