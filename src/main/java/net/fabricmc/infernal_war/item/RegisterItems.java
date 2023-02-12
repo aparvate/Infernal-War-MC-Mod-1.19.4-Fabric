@@ -10,10 +10,11 @@ import net.minecraft.util.Identifier;
 
 public class RegisterItems {
 
-    public static PigIron PIG_IRON = new PigIron(new FabricItemSettings());
-    public static ToolItem PIG_IRON_SCIMITAR = new SwordItem(PigIronToolMaterial.INSTANCE, 4, -2.4F, new Item.Settings());
+    public static final PigIron PIG_IRON = new PigIron(new FabricItemSettings());
+    public static final ToolItem PIG_IRON_SCIMITAR = new SwordItem(PigIronToolMaterial.INSTANCE, 4, -2.4F, new Item.Settings());
 
     public static void register() {
+        Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron"), PIG_IRON);
         Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron_scimitar"), PIG_IRON_SCIMITAR);
     }
 }

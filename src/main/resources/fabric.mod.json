@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "infernal_war",
   "version": "${version}",
 
   "name": "Infernal War",
@@ -18,7 +18,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.InfernalWar"
+      "net.fabricmc.infernal_war.InfernalWar"
     ]
   },
   "mixins": [
