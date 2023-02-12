@@ -2,7 +2,6 @@ package net.fabricmc.infernal_war;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.infernal_war.item.PigIron;
 import net.fabricmc.infernal_war.item.RegisterItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -27,6 +26,10 @@ public class InfernalWarGroup {
 
 		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_GROUP).register(content -> {
 			content.add(RegisterItems.PIG_IRON_SHOVEL);
+		});
+
+		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_GROUP).register(content -> {
+			content.add(RegisterItems.PIG_IRON_AXE);
 		});
     }
 }

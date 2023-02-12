@@ -15,11 +15,13 @@ public class RegisterItems {
     public static final ToolItem PIG_IRON_SCIMITAR = new SwordItem(PigIronToolMaterial.INSTANCE, 2, -2.4F, new Item.Settings());
     public static final ToolItem PIG_IRON_SHOVEL = new ShovelItem(PigIronToolMaterial.INSTANCE, 0, -3.0F, new Item.Settings());
     public static final ToolItem PIG_IRON_PICKAXE = new InfernalWarPickaxe(PigIronToolMaterial.INSTANCE, 1, -2.8F, new Item.Settings());
+    public static final ToolItem PIG_IRON_AXE = new InfernalWarAxe(PigIronToolMaterial.INSTANCE, 3.5F, -2.8F, new Item.Settings());
 
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron"), PIG_IRON);
         Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron_scimitar"), PIG_IRON_SCIMITAR);
         Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron_pickaxe"), PIG_IRON_PICKAXE);
         Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron_shovel"), PIG_IRON_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron_axe"), PIG_IRON_AXE);
     }
 }
