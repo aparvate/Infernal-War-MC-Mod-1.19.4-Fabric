@@ -2,9 +2,10 @@ package net.fabricmc.infernal_war.item;
 
 import net.minecraft.item.BowItem;
 
-public class InfernalWarBow extends BowItem {
+public class PigIronBow extends BowItem {
 
-    public InfernalWarBow(Settings settings) {
+
+    public PigIronBow(Settings settings) {
         super(settings);
     }
     
