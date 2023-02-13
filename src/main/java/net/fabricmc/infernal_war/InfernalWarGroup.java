@@ -16,9 +16,6 @@ public class InfernalWarGroup {
         ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_GROUP).register(content -> {
 			content.add(RegisterItems.PIG_IRON);
 		});
-		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_GROUP).register(content -> {
-			content.add(RegisterItems.PIG_IRON_SCIMITAR);
-		});
 
 		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_GROUP).register(content -> {
 			content.add(RegisterItems.PIG_IRON_PICKAXE);
@@ -30,6 +27,14 @@ public class InfernalWarGroup {
 
 		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_GROUP).register(content -> {
 			content.add(RegisterItems.PIG_IRON_AXE);
+		});
+
+		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_GROUP).register(content -> {
+			content.add(RegisterItems.PIG_IRON_HOE);
+		});
+
+		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_GROUP).register(content -> {
+			content.add(RegisterItems.PIG_IRON_SCIMITAR);
 		});
     }
 }

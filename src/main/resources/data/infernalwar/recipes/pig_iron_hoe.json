@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "PP ",
+      " S ",
+      " S "
+    ],
+    "key": {
+      "P": {
+        "item": "infernalwar:pig_iron"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "infernalwar:pig_iron_hoe"
+    }
+  }
