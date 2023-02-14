@@ -24,6 +24,12 @@
     },
     "done": false
   },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2023-02-13 22:15:37 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/golden_pickaxe": {
     "criteria": {
       "has_gold_ingot": "2023-02-12 14:43:16 -0600"
@@ -66,6 +72,12 @@
     },
     "done": true
   },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2023-02-13 22:15:37 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/golden_leggings": {
     "criteria": {
       "has_gold_ingot": "2023-02-12 14:43:16 -0600"
@@ -84,17 +96,18 @@
     },
     "done": true
   },
-  "minecraft:nether/explore_nether": {
-    "criteria": {
-      "minecraft:nether_wastes": "2023-02-12 14:39:48 -0600",
-      "minecraft:basalt_deltas": "2023-02-12 14:39:20 -0600"
-    },
-    "done": false
-  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:savanna": "2023-02-12 14:34:05 -0600",
       "minecraft:plains": "2023-02-12 14:34:43 -0600"
+    },
+    "done": false
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:nether_wastes": "2023-02-12 14:39:48 -0600",
+      "minecraft:basalt_deltas": "2023-02-12 14:39:20 -0600",
+      "minecraft:warped_forest": "2023-02-13 22:15:40 -0600"
     },
     "done": false
   },
@@ -140,6 +153,12 @@
     },
     "done": true
   },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2023-02-13 22:15:37 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/enchanting_table": {
     "criteria": {
       "has_obsidian": "2023-02-12 14:38:28 -0600"
@@ -173,6 +192,12 @@
   "minecraft:recipes/misc/gold_nugget_from_blasting": {
     "criteria": {
       "has_golden_sword": "2023-02-12 14:42:33 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/brewing_stand": {
+    "criteria": {
+      "has_blaze_rod": "2023-02-13 22:15:37 -0600"
     },
     "done": true
   },
