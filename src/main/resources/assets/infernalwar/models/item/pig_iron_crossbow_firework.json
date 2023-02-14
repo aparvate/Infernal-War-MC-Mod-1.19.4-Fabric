@@ -1,5 +1,5 @@
 {
-    "parent": "item/crossbow",
+    "parent": "infernalwar:item/pig_iron_crossbow",
     "textures": {
         "layer0": "infernalwar:item/pig_iron_crossbow_firework"
     }
