@@ -19,8 +19,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.infernal_war.InfernalWar"
+      "net.fabricmc.infernal_war.common.InfernalWar"
+    ],
+    "client": [
+      "net.fabricmc.infernal_war.client.InfernalWarClient"
     ]
+
   },
   "mixins": [
     "modid.mixins.json"

@@ -4,5 +4,10 @@
     "item.infernalwar.pig_iron_shovel": "Pig Iron Shovel",
     "item.infernalwar.pig_iron_axe": "Pig Iron Axe",
     "item.infernalwar.pig_iron_pickaxe": "Pig Iron Pickaxe",
-    "item.infernalwar.pig_iron_hoe": "Pig Iron Hoe"
+    "item.infernalwar.pig_iron_hoe": "Pig Iron Hoe",
+    "item.infernalwar.pig_iron_crossbow": "Pig Iron Crossbow",
+
+    "itemGroup.infernalwar.infernalwar_ingredients": "Infernal War: Ingredients",
+    "itemGroup.infernalwar.infernalwar_tools": "Infernal War: Tools and Utilities",
+    "itemGroup.infernalwar.infernalwar_combat": "Infernal War: Combat"
   }

@@ -1,6 +1,6 @@
 package net.fabricmc.infernal_war.mixin;
 
-import net.fabricmc.infernal_war.InfernalWar;
+import net.fabricmc.infernal_war.common.InfernalWar;
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
