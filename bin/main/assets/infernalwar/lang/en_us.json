@@ -9,5 +9,9 @@
 
     "itemGroup.infernalwar.infernalwar_ingredients": "Infernal War: Ingredients",
     "itemGroup.infernalwar.infernalwar_tools": "Infernal War: Tools and Utilities",
-    "itemGroup.infernalwar.infernalwar_combat": "Infernal War: Combat"
+    "itemGroup.infernalwar.infernalwar_combat": "Infernal War: Combat",
+
+    "item.minecraft.piglin_spawn_egg":"Piglin Scavenger Spawn Egg",
+
+    "entity.minecraft.piglin":"Piglin Scavenger"
   }
