@@ -1,11 +1,14 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-      "SPS",
+      "PGP",
       "#T#",
       " S "
     ],
     "key": {
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
       "P": {
         "item": "infernalwar:pig_iron"
       },

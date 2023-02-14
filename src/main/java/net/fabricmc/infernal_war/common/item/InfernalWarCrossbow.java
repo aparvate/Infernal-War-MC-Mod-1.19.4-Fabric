@@ -98,7 +98,7 @@ public class InfernalWarCrossbow extends RangedWeaponItem implements Vanishable 
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         int i = this.getMaxUseTime(stack) - remainingUseTicks;
-        float f = InfernalWarCrossbow.getPullProgress(i, stack);
+        float f = this.getPullProgress(i, stack);
         if (f >= 1.0f && !InfernalWarCrossbow.isCharged(stack) && InfernalWarCrossbow.loadProjectiles(user, stack)) {
             InfernalWarCrossbow.setCharged(stack, true);
             SoundCategory soundCategory = user instanceof PlayerEntity ? SoundCategory.PLAYERS : SoundCategory.HOSTILE;
@@ -283,7 +283,7 @@ public class InfernalWarCrossbow extends RangedWeaponItem implements Vanishable 
             int i = EnchantmentHelper.getLevel(Enchantments.QUICK_CHARGE, stack);
             SoundEvent soundEvent = this.getQuickChargeSound(i);
             SoundEvent soundEvent2 = i == 0 ? SoundEvents.ITEM_CROSSBOW_LOADING_MIDDLE : null;
-            float f = (float)(stack.getMaxUseTime() - remainingUseTicks) / (float)InfernalWarCrossbow.getPullTime(stack);
+            float f = (float)(stack.getMaxUseTime() - remainingUseTicks) / (float)this.getPullTime(stack);
             if (f < 0.2f) {
                 this.charged = false;
                 this.loaded = false;
@@ -301,12 +301,12 @@ public class InfernalWarCrossbow extends RangedWeaponItem implements Vanishable 
 
     @Override
     public int getMaxUseTime(ItemStack stack) {
-        return InfernalWarCrossbow.getPullTime(stack) + 3;
+        return this.getPullTime(stack) + 3;
     }
 
-    public static int getPullTime(ItemStack stack) {
+    public int getPullTime(ItemStack stack) {
         int i = EnchantmentHelper.getLevel(Enchantments.QUICK_CHARGE, stack);
-        return i == 0 ? 25 : 25 - 5 * i;
+        return i == 0 ? DEFAULT_PULL_TIME : DEFAULT_PULL_TIME - 5 * i;
     }
 
     @Override
@@ -329,8 +329,8 @@ public class InfernalWarCrossbow extends RangedWeaponItem implements Vanishable 
         return SoundEvents.ITEM_CROSSBOW_LOADING_START;
     }
 
-    private static float getPullProgress(int useTicks, ItemStack stack) {
-        float f = (float)useTicks / (float)InfernalWarCrossbow.getPullTime(stack);
+    private float getPullProgress(int useTicks, ItemStack stack) {
+        float f = (float)useTicks / (float)this.getPullTime(stack);
         if (f > 1.0f) {
             f = 1.0f;
         }

@@ -16,7 +16,7 @@ public class RegisterItems {
     public static final ToolItem PIG_IRON_PICKAXE = new InfernalWarPickaxe(PigIronToolMaterial.INSTANCE, 1, -2.8F, new FabricItemSettings().fireproof());
     public static final ToolItem PIG_IRON_AXE = new InfernalWarAxe(PigIronToolMaterial.INSTANCE, 4.5F, -3.1F, new FabricItemSettings().fireproof());
     public static final ToolItem PIG_IRON_HOE = new InfernalWarHoe(PigIronToolMaterial.INSTANCE, 0, -2.4F, new FabricItemSettings().fireproof());
-    public static final InfernalWarCrossbow PIG_IRON_CROSSBOW = new InfernalWarCrossbow(new FabricItemSettings().fireproof().maxDamage(750), 25, 6, 4.5F);
+    public static final InfernalWarCrossbow PIG_IRON_CROSSBOW = new InfernalWarCrossbow(new FabricItemSettings().fireproof().maxDamage(750), 40, 6, 4.5F);
 
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron"), PIG_IRON);
