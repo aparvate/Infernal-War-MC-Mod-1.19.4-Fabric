@@ -49,8 +49,8 @@ public class InfernalWarCrossbow extends RangedWeaponItem implements Vanishable 
     private boolean loaded = false;
     private static final float field_30867 = 0.2f;
     private static final float field_30868 = 0.5f;
-    private static float DEFAULT_SPEED;
-    private static final float FIREWORK_ROCKET_SPEED = 1.6f;
+    private float DEFAULT_SPEED;
+    private final float FIREWORK_ROCKET_SPEED = 1.6f;
 
     public InfernalWarCrossbow(Item.Settings settings, int pull_time, int range, float speed) {
         super(settings);
@@ -73,7 +73,7 @@ public class InfernalWarCrossbow extends RangedWeaponItem implements Vanishable 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         if (InfernalWarCrossbow.isCharged(itemStack)) {
-            InfernalWarCrossbow.shootAll(world, user, hand, itemStack, InfernalWarCrossbow.getSpeed(itemStack), 1.0f);
+            InfernalWarCrossbow.shootAll(world, user, hand, itemStack, this.getSpeed(itemStack), 1.0f);
             InfernalWarCrossbow.setCharged(itemStack, false);
             return TypedActionResult.consume(itemStack);
         }
@@ -88,11 +88,11 @@ public class InfernalWarCrossbow extends RangedWeaponItem implements Vanishable 
         return TypedActionResult.fail(itemStack);
     }
 
-    private static float getSpeed(ItemStack stack) {
+    private float getSpeed(ItemStack stack) {
         if (InfernalWarCrossbow.hasProjectile(stack, Items.FIREWORK_ROCKET)) {
-            return 1.6f;
+            return this.FIREWORK_ROCKET_SPEED;
         }
-        return InfernalWarCrossbow.DEFAULT_SPEED;
+        return this.DEFAULT_SPEED;
     }
 
     @Override

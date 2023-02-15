@@ -50,5 +50,21 @@ public class InfernalWarGroup {
 		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_COMBAT).register(content -> {
 			content.add(RegisterItems.PIG_IRON_CROSSBOW);
 		});
+
+		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_COMBAT).register(content -> {
+			content.add(RegisterItems.PIG_IRON_HELMET);
+		});
+
+		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_COMBAT).register(content -> {
+			content.add(RegisterItems.PIG_IRON_CHESTPLATE);
+		});
+
+		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_COMBAT).register(content -> {
+			content.add(RegisterItems.PIG_IRON_LEGGINGS);
+		});
+
+		ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_COMBAT).register(content -> {
+			content.add(RegisterItems.PIG_IRON_BOOTS);
+		});
     }
 }

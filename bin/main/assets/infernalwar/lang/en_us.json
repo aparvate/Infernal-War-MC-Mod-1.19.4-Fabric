@@ -7,6 +7,11 @@
     "item.infernalwar.pig_iron_hoe": "Pig Iron Hoe",
     "item.infernalwar.pig_iron_crossbow": "Pig Iron Crossbow",
 
+    "item.infernalwar.pig_iron_helmet": "Pig Iron Helmet",
+    "item.infernalwar.pig_iron_chestplate": "Pig Iron Chestplate",
+    "item.infernalwar.pig_iron_leggings": "Pig Iron Leggings",
+    "item.infernalwar.pig_iron_boots": "Pig Iron Boots",
+
     "itemGroup.infernalwar.infernalwar_ingredients": "Infernal War: Ingredients",
     "itemGroup.infernalwar.infernalwar_tools": "Infernal War: Tools and Utilities",
     "itemGroup.infernalwar.infernalwar_combat": "Infernal War: Combat",
