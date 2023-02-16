@@ -18,7 +18,7 @@ public class InfernalWarPredicateProvider {
             if (LivingEntity == null) {
                 return 0.0F;
             }
-            return LivingEntity.getActiveItem() != ItemStack ? 0.0F : (ItemStack.getMaxUseTime() - LivingEntity.getItemUseTimeLeft()) / 20.0F;
+            return LivingEntity.getActiveItem() != ItemStack ? 0.0F : (ItemStack.getMaxUseTime() - LivingEntity.getItemUseTimeLeft()) / 20.0f / (bow.TICKS_PER_SECOND/20);
         });
          
         ModelPredicateProviderRegistry.register(bow, new Identifier("pulling"), (ItemStack, ClientWorld, LivingEntity, seed) -> {

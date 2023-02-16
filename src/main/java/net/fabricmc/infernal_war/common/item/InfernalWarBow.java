@@ -25,13 +25,15 @@ public class InfernalWarBow extends RangedWeaponItem implements Vanishable {
     public int RANGE;
     public double DAMAGE;
     public float SPEED;
+    public float DIVERGENCE;
 
-    public InfernalWarBow(Item.Settings settings, int TICKS_PER_SECOND, int RANGE, Double DAMAGE, float SPEED) {
+    public InfernalWarBow(Item.Settings settings, int TICKS_PER_SECOND, int RANGE, Double DAMAGE, float SPEED, float DIVERGENCE) {
         super(settings);
         this.RANGE = RANGE;
         this.TICKS_PER_SECOND = TICKS_PER_SECOND;
         this.DAMAGE = DAMAGE;
         this.SPEED = SPEED;
+        this.DIVERGENCE = DIVERGENCE;
     }
 
     @Override
@@ -61,7 +63,7 @@ public class InfernalWarBow extends RangedWeaponItem implements Vanishable {
             ArrowItem arrowItem = (ArrowItem)(itemStack.getItem() instanceof ArrowItem ? itemStack.getItem() : Items.ARROW);
             PersistentProjectileEntity persistentProjectileEntity = arrowItem.createArrow(world, itemStack, playerEntity);
             persistentProjectileEntity.setDamage(DAMAGE);
-            persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, (f + SPEED) * 3.0f, 1.0f);
+            persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, (f + SPEED) * 3.0f, DIVERGENCE);
             if (f == 1.0f) {
                 persistentProjectileEntity.setCritical(true);
             }
