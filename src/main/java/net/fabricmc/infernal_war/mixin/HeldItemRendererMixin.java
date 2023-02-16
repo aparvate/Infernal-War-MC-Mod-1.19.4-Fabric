@@ -43,6 +43,6 @@ public class HeldItemRendererMixin {
 
     @Redirect(method = "getHandRenderType", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;isOf(Lnet/minecraft/item/Item;)Z"))
     private static boolean getHandRenderType(ItemStack stack, Item isOfItem) {
-        return (RegisterItems.PIG_IRON_CROSSBOW.equals(stack.getItem()) || stack.isOf(Items.CROSSBOW) || stack.isOf(Items.BOW));
+        return (RegisterItems.PIG_IRON_CROSSBOW.equals(stack.getItem()) || RegisterItems.PIG_IRON_CROSSBOW.equals(stack.getItem()) || stack.isOf(Items.CROSSBOW) || stack.isOf(Items.BOW));
     }
 }

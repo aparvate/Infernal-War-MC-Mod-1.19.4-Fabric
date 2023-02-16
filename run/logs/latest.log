@@ -1,6 +1,6 @@
-[03:55:36] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.19.3 with Fabric Loader 0.14.11
-[03:55:37] [ForkJoinPool-1-worker-1/WARN] (FabricLoader/Metadata) Mod infernalwar uses the version ${version} which isn't compatible with Loader's extended semantic version format (Could not parse version number component '${version}'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
-[03:55:37] [main/INFO] (FabricLoader) Loading 45 mods:
+[01:50:20] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.19.3 with Fabric Loader 0.14.11
+[01:50:21] [ForkJoinPool-1-worker-1/WARN] (FabricLoader/Metadata) Mod infernalwar uses the version ${version} which isn't compatible with Loader's extended semantic version format (Could not parse version number component '${version}'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
+[01:50:21] [main/INFO] (FabricLoader) Loading 45 mods:
 	- fabric-api 0.68.1+1.19.3
 	- fabric-api-base 0.4.19+8d1895cf72
 	- fabric-api-lookup-api-v1 1.6.18+49abcf7e72
@@ -46,15 +46,15 @@
 	- infernalwar ${version}
 	- java 17
 	- minecraft 1.19.3
-[03:55:37] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/c1dc27696aa4006e492c2485c9ccbcb26045a971/sponge-mixin-0.11.4+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[03:55:37] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[03:55:37] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[03:55:37] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[03:55:39] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar!/oshi.properties, jar:file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar!/oshi.properties]
-[03:55:40] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.architecture.properties file on the classpath: [jar:file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar!/oshi.architecture.properties, jar:file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar!/oshi.architecture.properties]
-[03:55:47] [main/INFO] (Minecraft) Building optimized datafixer
-[03:55:59] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[03:56:01] [Render thread/ERROR] (fabric-screen-api-v1) Failed to verify authentication
+[01:50:21] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/c1dc27696aa4006e492c2485c9ccbcb26045a971/sponge-mixin-0.11.4+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[01:50:21] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[01:50:21] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[01:50:22] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[01:50:23] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar!/oshi.properties, jar:file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar!/oshi.properties]
+[01:50:24] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.architecture.properties file on the classpath: [jar:file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar!/oshi.architecture.properties, jar:file:/Users/agoghparvate/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar!/oshi.architecture.properties]
+[01:50:30] [main/INFO] (Minecraft) Building optimized datafixer
+[01:50:47] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[01:50:49] [Render thread/ERROR] (fabric-screen-api-v1) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-3.16.29.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-3.16.29.jar:?]
@@ -73,147 +73,71 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-3.16.29.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-3.16.29.jar:?]
 	... 10 more
-[03:56:02] [Render thread/INFO] (fabric-screen-api-v1) Setting user: Player609
-[03:56:04] [Render thread/INFO] (infernalwar) The Piglins will rise...
-[03:56:05] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[03:56:07] [Render thread/INFO] (fabric-screen-api-v1) Backend library: LWJGL version 3.3.1 SNAPSHOT
-[03:56:12] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, Fabric Mods (Fabric Models (v0), Fabric Transitive Access Wideners (v1), Fabric API Base, Fabric Crash Report Info (v1), Fabric Lifecycle Events (v1), Fabric Rendering Fluids (v1), Example Mod, Fabric API, Fabric Client Tags, Fabric Resource Loader (v0), Fabric Rendering Data Attachment (v1), Fabric Transfer API (v1), Fabric Screen API (v1), Fabric Game Rule API (v1), Fabric Renderer API (v1), Fabric Registry Sync (v0), Fabric Message API (v1), Fabric Command API (v2), Fabric API Lookup API (v1), Fabric Loot API (v2), Fabric Object Builder API (v1), Fabric Particles (v1), Fabric Game Test API (v1), Fabric Mining Level API (v1), Fabric Biome API (v1), Fabric Entity Events (v1), Fabric Events Interaction (v0), Fabric Renderer - Indigo, Fabric Data Generation API (v1), Fabric Item Group API (v1), Fabric Screen Handler API (v1), Fabric Loader, Fabric Convention Tags, Fabric Content Registries (v0), Fabric Item API (v1), Fabric BlockRenderLayer Registration (v1), Fabric Key Binding API (v1), Fabric Networking API (v1), Fabric Resource Conditions API (v1), Fabric Dimensions API (v1), Fabric Sound API (v1), Fabric Rendering (v1))
-[03:56:15] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
-[03:56:23] [Worker-Main-11/WARN] (Minecraft) Unable to load model: 'infernalwar:pig_iron_leggings#inventory' referenced from: infernalwar:pig_iron_leggings#inventory: java.io.FileNotFoundException: infernalwar:models/item/pig_iron_leggings.json
-[03:56:23] [Worker-Main-11/WARN] (Minecraft) Unable to load model: 'infernalwar:pig_iron_chestplate#inventory' referenced from: infernalwar:pig_iron_chestplate#inventory: java.io.FileNotFoundException: infernalwar:models/item/pig_iron_chestplate.json
-[03:56:23] [Worker-Main-11/WARN] (Minecraft) Unable to load model: 'infernalwar:pig_iron_boots#inventory' referenced from: infernalwar:pig_iron_boots#inventory: java.io.FileNotFoundException: infernalwar:models/item/pig_iron_boots.json
-[03:56:23] [Worker-Main-11/WARN] (Minecraft) Unable to load model: 'infernalwar:pig_iron_helmet#inventory' referenced from: infernalwar:pig_iron_helmet#inventory: java.io.FileNotFoundException: infernalwar:models/item/pig_iron_helmet.json
-[03:56:27] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[03:56:27] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[03:56:28] [Render thread/INFO] (Minecraft) OpenAL initialized on device CoreAudio Default
-[03:56:28] [Render thread/INFO] (Minecraft) Sound engine started
-[03:56:28] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[03:56:28] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
-[03:56:28] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[03:56:28] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[03:56:28] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[03:56:28] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[03:56:28] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[03:56:29] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[03:56:29] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[03:56:29] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[03:56:29] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[03:56:41] [Render thread/INFO] (Minecraft) Loaded 7 recipes
-[03:56:44] [Render thread/INFO] (Minecraft) Loaded 1179 advancements
-[03:56:45] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 63 new biomes in 68.57 ms
-[03:56:45] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.19.3
-[03:56:45] [Server thread/INFO] (Minecraft) Generating keypair
-[03:56:48] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:08] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:08] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:09] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:09] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:10] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:10] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:11] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:11] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:12] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:12] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:13] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:13] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:57:14] [Render thread/INFO] (Minecraft) Preparing spawn area: 12%
-[03:57:14] [Render thread/INFO] (Minecraft) Preparing spawn area: 12%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
-[03:57:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 18%
-[03:57:24] [Render thread/INFO] (Minecraft) Preparing spawn area: 24%
-[03:57:24] [Render thread/INFO] (Minecraft) Preparing spawn area: 34%
-[03:57:25] [Render thread/INFO] (Minecraft) Preparing spawn area: 35%
-[03:57:25] [Render thread/INFO] (Minecraft) Preparing spawn area: 59%
-[03:57:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 73%
-[03:57:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 92%
-[03:57:27] [Render thread/INFO] (Minecraft) Preparing spawn area: 95%
-[03:57:33] [Render thread/INFO] (Minecraft) Time elapsed: 44717 ms
-[03:57:34] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
-[03:57:34] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
-[03:57:36] [Worker-Bootstrap-3/INFO] (Minecraft) 4445 Datafixer optimizations took 108882 milliseconds
-[03:57:36] [Server thread/INFO] (Minecraft) Player609[local:E:80ed51b6] logged in with entity id 101 at (13.639683388216586, -55.974609872380555, 15.386336263829392)
-[03:57:36] [Server thread/INFO] (Minecraft) Player609 joined the game
-[03:57:37] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 3819ms or 76 ticks behind
-[03:57:40] [Render thread/INFO] (Minecraft) Loaded 0 advancements
-[03:57:41] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[03:57:41] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[03:57:48] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[03:57:48] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[03:58:02] [Render thread/INFO] (Minecraft) Loaded 3 advancements
-[03:58:40] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[03:58:41] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[03:58:41] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[03:58:41] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[03:58:43] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[03:58:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[03:58:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[03:58:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[03:58:45] [Server thread/INFO] (Minecraft) Player609 lost connection: Disconnected
-[03:58:45] [Server thread/INFO] (Minecraft) Player609 left the game
-[03:58:45] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
-[03:58:45] [Server thread/INFO] (Minecraft) Stopping server
-[03:58:45] [Server thread/INFO] (Minecraft) Saving players
-[03:58:45] [Server thread/INFO] (Minecraft) Saving worlds
-[03:58:47] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[03:58:47] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[03:58:47] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[03:58:47] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (New World): All chunks are saved
-[03:58:47] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[03:58:47] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[03:58:47] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
-[03:58:49] [Render thread/INFO] (fabric-screen-api-v1) Stopping!
+[01:50:50] [Render thread/INFO] (fabric-screen-api-v1) Setting user: Player826
+[01:50:52] [Render thread/INFO] (infernalwar) The Piglins will rise...
+[01:50:53] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[01:50:55] [Render thread/INFO] (fabric-screen-api-v1) Backend library: LWJGL version 3.3.1 SNAPSHOT
+[01:51:02] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, Fabric Mods (Fabric API Base, Fabric API Lookup API (v1), Fabric Item API (v1), Fabric Resource Loader (v0), Fabric BlockRenderLayer Registration (v1), Fabric Key Binding API (v1), Fabric Command API (v2), Fabric Renderer API (v1), Fabric Transfer API (v1), Fabric Mining Level API (v1), Fabric Dimensions API (v1), Fabric Screen API (v1), Fabric Client Tags, Fabric Rendering (v1), Fabric Particles (v1), Fabric Rendering Fluids (v1), Fabric Renderer - Indigo, Fabric Game Rule API (v1), Fabric API, Fabric Object Builder API (v1), Example Mod, Fabric Crash Report Info (v1), Fabric Transitive Access Wideners (v1), Fabric Events Interaction (v0), Fabric Resource Conditions API (v1), Fabric Registry Sync (v0), Fabric Data Generation API (v1), Fabric Screen Handler API (v1), Fabric Models (v0), Fabric Game Test API (v1), Fabric Content Registries (v0), Fabric Item Group API (v1), Fabric Rendering Data Attachment (v1), Fabric Entity Events (v1), Fabric Lifecycle Events (v1), Fabric Message API (v1), Fabric Networking API (v1), Fabric Sound API (v1), Fabric Loader, Fabric Biome API (v1), Fabric Convention Tags, Fabric Loot API (v2))
+[01:51:05] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
+[01:51:05] [Worker-Main-14/ERROR] (ModNioResourcePack) Invalid path in mod resource-pack fabric:infernalwar: infernalwar:textures/item/.DS_Store, ignoring
+[01:51:16] [Worker-Main-14/WARN] (Minecraft) Unable to load model: 'infernalwar:pig_iron_leggings#inventory' referenced from: infernalwar:pig_iron_leggings#inventory: java.io.FileNotFoundException: infernalwar:models/item/pig_iron_leggings.json
+[01:51:16] [Worker-Main-14/WARN] (Minecraft) Unable to load model: 'infernalwar:pig_iron_chestplate#inventory' referenced from: infernalwar:pig_iron_chestplate#inventory: java.io.FileNotFoundException: infernalwar:models/item/pig_iron_chestplate.json
+[01:51:16] [Worker-Main-14/WARN] (Minecraft) Unable to load model: 'infernalwar:pig_iron_boots#inventory' referenced from: infernalwar:pig_iron_boots#inventory: java.io.FileNotFoundException: infernalwar:models/item/pig_iron_boots.json
+[01:51:16] [Worker-Main-14/WARN] (Minecraft) Unable to load model: 'infernalwar:pig_iron_helmet#inventory' referenced from: infernalwar:pig_iron_helmet#inventory: java.io.FileNotFoundException: infernalwar:models/item/pig_iron_helmet.json
+[01:51:19] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[01:51:19] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[01:51:20] [Render thread/INFO] (Minecraft) OpenAL initialized on device CoreAudio Default
+[01:51:20] [Render thread/INFO] (Minecraft) Sound engine started
+[01:51:20] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[01:51:20] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
+[01:51:20] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[01:51:20] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[01:51:20] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[01:51:20] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[01:51:20] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[01:51:22] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[01:51:22] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[01:51:22] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[01:51:22] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[01:52:04] [Worker-Bootstrap-7/INFO] (Minecraft) 4445 Datafixer optimizations took 94130 milliseconds
+[01:52:18] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[01:52:18] [Render thread/INFO] (Minecraft) Loaded 1179 advancements
+[01:52:19] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 63 new biomes in 4.883 ms
+[01:52:19] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.19.3
+[01:52:19] [Server thread/INFO] (Minecraft) Generating keypair
+[01:52:20] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[01:52:27] [Render thread/INFO] (Minecraft) Preparing spawn area: 24%
+[01:52:27] [Render thread/INFO] (Minecraft) Preparing spawn area: 86%
+[01:52:28] [Render thread/INFO] (Minecraft) Time elapsed: 7362 ms
+[01:52:28] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[01:52:28] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[01:52:29] [Server thread/INFO] (Minecraft) Player826[local:E:562c5130] logged in with entity id 147 at (50.208372340542674, -60.0, 24.94767120775391)
+[01:52:29] [Server thread/INFO] (Minecraft) Player826 joined the game
+[01:52:30] [Server thread/INFO] (Minecraft) Player826 has made the advancement [Cover Me with Diamonds]
+[01:52:30] [Render thread/INFO] (Minecraft) [System] [CHAT] Player826 has made the advancement [Cover Me with Diamonds]
+[01:52:32] [Render thread/INFO] (Minecraft) Loaded 9 advancements
+[01:52:33] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2043ms or 40 ticks behind
+[01:52:34] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[01:52:34] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:52:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:52:37] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01:54:04] [Server thread/INFO] (Minecraft) Player826 has made the advancement [Take Aim]
+[01:54:04] [Render thread/INFO] (Minecraft) [System] [CHAT] Player826 has made the advancement [Take Aim]
+[01:54:04] [Render thread/INFO] (Minecraft) Loaded 14 advancements
+[01:54:49] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[01:54:49] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01:54:49] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01:54:49] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
