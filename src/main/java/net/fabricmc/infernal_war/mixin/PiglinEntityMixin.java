@@ -15,9 +15,12 @@ import net.minecraft.entity.InventoryOwner;
 import net.minecraft.entity.mob.AbstractPiglinEntity;
 import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.util.math.random.*;
+import net.minecraft.util.math.random.Random;
 
 @Mixin(PiglinEntity.class)
 public abstract class PiglinEntityMixin{
@@ -27,7 +30,7 @@ public abstract class PiglinEntityMixin{
 
     @Inject(method = "initEquipment", at = @At("HEAD"))
     protected void initEquipment(Random random, LocalDifficulty localDifficulty, CallbackInfo info){
-        if (random.nextInt(2) == 0){
+        if (random.nextInt(1) == 0){
             if (((PiglinEntity)(Object)this).isAdult()) {
                 this.equipAtChance(EquipmentSlot.HEAD, new ItemStack(RegisterItems.PIG_IRON_HELMET), random);
                 this.equipAtChance(EquipmentSlot.CHEST, new ItemStack(RegisterItems.PIG_IRON_CHESTPLATE), random);
@@ -36,4 +39,25 @@ public abstract class PiglinEntityMixin{
             }
         }
     }
+
+    /*java.util.Random random = new java.util.Random();
+
+    @Shadow
+    @Inject(method = "makeInitialWeapon", at = @At("HEAD"))
+    private ItemStack makeInitialWeapon(CallbackInfo info){
+        if ((double)this.random.nextFloat() < 0.5){
+            if ((double)this.random.nextFloat() < 0.5){
+                return new ItemStack(RegisterItems.PIG_IRON_SCIMITAR);
+            }
+            else{
+                return new ItemStack(RegisterItems.PIG_IRON_AXE);
+            }
+        }
+        else{
+            if ((double)this.random.nextFloat() < 0.5) {
+                return new ItemStack(Items.CROSSBOW);
+            }
+            return new ItemStack(Items.GOLDEN_SWORD);
+        }
+    }*/
 }
