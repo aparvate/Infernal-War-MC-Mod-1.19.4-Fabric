@@ -30,7 +30,7 @@ public abstract class PiglinEntityMixin{
 
     @Inject(method = "initEquipment", at = @At("HEAD"))
     protected void initEquipment(Random random, LocalDifficulty localDifficulty, CallbackInfo info){
-        if (random.nextInt(1) == 0){
+        if ((double)random.nextFloat() <= 0.25){
             if (((PiglinEntity)(Object)this).isAdult()) {
                 this.equipAtChance(EquipmentSlot.HEAD, new ItemStack(RegisterItems.PIG_IRON_HELMET), random);
                 this.equipAtChance(EquipmentSlot.CHEST, new ItemStack(RegisterItems.PIG_IRON_CHESTPLATE), random);
@@ -40,24 +40,18 @@ public abstract class PiglinEntityMixin{
         }
     }
 
-    /*java.util.Random random = new java.util.Random();
-
-    @Shadow
-    @Inject(method = "makeInitialWeapon", at = @At("HEAD"))
-    private ItemStack makeInitialWeapon(CallbackInfo info){
-        if ((double)this.random.nextFloat() < 0.5){
-            if ((double)this.random.nextFloat() < 0.5){
-                return new ItemStack(RegisterItems.PIG_IRON_SCIMITAR);
-            }
-            else{
-                return new ItemStack(RegisterItems.PIG_IRON_AXE);
-            }
+    LocalRandom random = new LocalRandom(RandomSeed.getSeed());
+    private ItemStack makeInitialWeapon(){
+        double randVal = (double)this.random.nextFloat();
+        if (randVal <= 0.6) {
+            return new ItemStack(Items.CROSSBOW);
         }
-        else{
-            if ((double)this.random.nextFloat() < 0.5) {
-                return new ItemStack(Items.CROSSBOW);
-            }
-            return new ItemStack(Items.GOLDEN_SWORD);
+        else if (randVal <= 0.7) {
+            return new ItemStack(RegisterItems.PIG_IRON_AXE);
         }
-    }*/
+        else if (randVal <= 0.8) {
+            return new ItemStack(RegisterItems.PIG_IRON_SCIMITAR);
+        }
+        return new ItemStack(Items.GOLDEN_SWORD);
+    }
 }
