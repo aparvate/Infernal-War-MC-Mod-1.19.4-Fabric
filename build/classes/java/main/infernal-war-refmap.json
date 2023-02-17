@@ -1,13 +1,13 @@
 {
   "mappings": {
-    "net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin": {
-      "render": "Lnet/minecraft/class_976;method_17159(Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;ILnet/minecraft/class_1309;FFFFFF)V"
+    "net/fabricmc/infernal_war/mixin/PiglinEntityMixin": {
+      "initEquipment": "Lnet/minecraft/class_4836;initEquipment(Lnet/minecraft/class_5819;Lnet/minecraft/class_1266;)V"
     }
   },
   "data": {
     "named:intermediary": {
-      "net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin": {
-        "render": "Lnet/minecraft/class_976;method_17159(Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;ILnet/minecraft/class_1309;FFFFFF)V"
+      "net/fabricmc/infernal_war/mixin/PiglinEntityMixin": {
+        "initEquipment": "Lnet/minecraft/class_4836;initEquipment(Lnet/minecraft/class_5819;Lnet/minecraft/class_1266;)V"
       }
     }
   }
