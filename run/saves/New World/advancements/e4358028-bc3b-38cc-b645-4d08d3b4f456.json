@@ -1,0 +1,41 @@
+{
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2023-02-17 17:28:57 -0600"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2023-02-17 17:26:22 -0600"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:ghast": "2023-02-17 17:28:57 -0600"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:ghast": "2023-02-17 17:28:57 -0600"
+    },
+    "done": false
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2023-02-17 17:30:23 -0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:nether_wastes": "2023-02-17 17:26:32 -0600",
+      "minecraft:soul_sand_valley": "2023-02-17 17:27:56 -0600",
+      "minecraft:basalt_deltas": "2023-02-17 17:27:47 -0600"
+    },
+    "done": false
+  },
+  "DataVersion": 3218
+}
