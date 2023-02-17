@@ -4,7 +4,8 @@
   "package": "net.fabricmc.infernal_war.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "PiglinEntityMixin"
+    "PiglinEntityMixin",
+    "PiglinBruteEntityMixin"
   ],
   "client": [
     "PlayerEntityRendererMixin",

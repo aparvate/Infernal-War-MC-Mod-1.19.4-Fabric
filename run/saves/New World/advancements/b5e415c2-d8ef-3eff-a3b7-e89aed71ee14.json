@@ -1,0 +1,54 @@
+{
+  "minecraft:recipes/tools/flint_and_steel": {
+    "criteria": {
+      "has_obsidian": "2023-02-17 16:04:55 -0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/find_fortress": {
+    "criteria": {
+      "fortress": "2023-02-17 16:09:02 -0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2023-02-17 16:06:15 -0600"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2023-02-17 16:05:22 -0600"
+    },
+    "done": true
+  },
+  "minecraft:story/form_obsidian": {
+    "criteria": {
+      "obsidian": "2023-02-17 16:04:55 -0600"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2023-02-17 16:06:15 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/enchanting_table": {
+    "criteria": {
+      "has_obsidian": "2023-02-17 16:04:55 -0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2023-02-17 16:04:19 -0600",
+      "minecraft:nether_wastes": "2023-02-17 16:06:16 -0600",
+      "minecraft:soul_sand_valley": "2023-02-17 16:08:52 -0600",
+      "minecraft:warped_forest": "2023-02-17 16:07:23 -0600"
+    },
+    "done": false
+  },
+  "DataVersion": 3218
+}
