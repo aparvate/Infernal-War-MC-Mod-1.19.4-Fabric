@@ -1,8 +1,11 @@
 package net.fabricmc.infernal_war.common.item;
 
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.infernal_war.common.material.PigIronToolMaterial;
+import net.fabricmc.infernal_war.client.rendering.InfernalWarPiglinHelmet;
 import net.fabricmc.infernal_war.common.material.InfernalWarArmorMaterials;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;

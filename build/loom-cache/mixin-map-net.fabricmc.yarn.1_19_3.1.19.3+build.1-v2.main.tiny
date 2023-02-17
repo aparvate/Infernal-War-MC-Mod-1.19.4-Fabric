@@ -1,1 +1,4 @@
 v1	named	intermediary
+FIELD	net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin	F	scaleX	field_24474
+FIELD	net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin	F	scaleY	field_24475
+FIELD	net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin	F	scaleZ	field_24476
