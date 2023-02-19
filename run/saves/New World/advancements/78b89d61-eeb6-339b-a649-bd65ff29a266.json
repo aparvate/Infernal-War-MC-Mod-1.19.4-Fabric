@@ -1,0 +1,21 @@
+{
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2023-02-19 01:41:03 -0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/find_bastion": {
+    "criteria": {
+      "bastion": "2023-02-19 01:41:18 -0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2023-02-19 01:41:18 -0600"
+    },
+    "done": false
+  },
+  "DataVersion": 3218
+}
