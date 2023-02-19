@@ -1,4 +1,44 @@
 {
-  "mappings": {},
-  "data": {}
+  "mappings": {
+    "net/fabricmc/infernal_war/mixin/PlayerEntityRendererMixin": {
+      "getArmPose": "Lnet/minecraft/class_1007;method_4210(Lnet/minecraft/class_742;Lnet/minecraft/class_1268;)Lnet/minecraft/class_572$class_573;"
+    },
+    "net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin": {
+      "render": "Lnet/minecraft/class_976;method_17159(Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;ILnet/minecraft/class_1309;FFFFFF)V"
+    },
+    "net/fabricmc/infernal_war/mixin/HeldItemRendererMixin": {
+      "renderFirstPersonItem": "Lnet/minecraft/class_759;method_3228(Lnet/minecraft/class_742;FFLnet/minecraft/class_1268;FLnet/minecraft/class_1799;FLnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V",
+      "getHandRenderType": "Lnet/minecraft/class_759;method_33303(Lnet/minecraft/class_746;)Lnet/minecraft/class_759$class_5773;",
+      "getUsingItemHandRenderType": "Lnet/minecraft/class_759;method_33304(Lnet/minecraft/class_746;)Lnet/minecraft/class_759$class_5773;",
+      "Lnet/minecraft/item/ItemStack;isOf(Lnet/minecraft/item/Item;)Z": "Lnet/minecraft/class_1799;method_31574(Lnet/minecraft/class_1792;)Z"
+    },
+    "net/fabricmc/infernal_war/mixin/PiglinBruteEntityMixin": {
+      "initEquipment": "Lnet/minecraft/class_5419;method_5964(Lnet/minecraft/class_5819;Lnet/minecraft/class_1266;)V"
+    },
+    "net/fabricmc/infernal_war/mixin/PiglinEntityMixin": {
+      "initEquipment": "Lnet/minecraft/class_4836;method_5964(Lnet/minecraft/class_5819;Lnet/minecraft/class_1266;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/fabricmc/infernal_war/mixin/PlayerEntityRendererMixin": {
+        "getArmPose": "Lnet/minecraft/class_1007;method_4210(Lnet/minecraft/class_742;Lnet/minecraft/class_1268;)Lnet/minecraft/class_572$class_573;"
+      },
+      "net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin": {
+        "render": "Lnet/minecraft/class_976;method_17159(Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;ILnet/minecraft/class_1309;FFFFFF)V"
+      },
+      "net/fabricmc/infernal_war/mixin/HeldItemRendererMixin": {
+        "renderFirstPersonItem": "Lnet/minecraft/class_759;method_3228(Lnet/minecraft/class_742;FFLnet/minecraft/class_1268;FLnet/minecraft/class_1799;FLnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V",
+        "getHandRenderType": "Lnet/minecraft/class_759;method_33303(Lnet/minecraft/class_746;)Lnet/minecraft/class_759$class_5773;",
+        "getUsingItemHandRenderType": "Lnet/minecraft/class_759;method_33304(Lnet/minecraft/class_746;)Lnet/minecraft/class_759$class_5773;",
+        "Lnet/minecraft/item/ItemStack;isOf(Lnet/minecraft/item/Item;)Z": "Lnet/minecraft/class_1799;method_31574(Lnet/minecraft/class_1792;)Z"
+      },
+      "net/fabricmc/infernal_war/mixin/PiglinBruteEntityMixin": {
+        "initEquipment": "Lnet/minecraft/class_5419;method_5964(Lnet/minecraft/class_5819;Lnet/minecraft/class_1266;)V"
+      },
+      "net/fabricmc/infernal_war/mixin/PiglinEntityMixin": {
+        "initEquipment": "Lnet/minecraft/class_4836;method_5964(Lnet/minecraft/class_5819;Lnet/minecraft/class_1266;)V"
+      }
+    }
+  }
 }
