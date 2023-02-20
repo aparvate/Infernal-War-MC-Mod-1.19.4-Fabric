@@ -40,10 +40,10 @@ import net.minecraft.util.Hand;
 @Mixin(PlayerEntityRenderer.class)
 public class PlayerEntityRendererMixin {
     @Inject(method = "getArmPose", at = @At("HEAD"), cancellable = true)
-    private static void getArmPose(AbstractClientPlayerEntity abstractClientPlayerEntity, Hand hand, CallbackInfoReturnable<BipedEntityModel.ArmPose> cir) {
+    private static void getArmPose(AbstractClientPlayerEntity abstractClientPlayerEntity, Hand hand, CallbackInfoReturnable<BipedEntityModel.ArmPose> info) {
         ItemStack itemStack = abstractClientPlayerEntity.getStackInHand(hand);
         if (!abstractClientPlayerEntity.handSwinging && itemStack.isOf(RegisterItems.PIG_IRON_CROSSBOW) && InfernalWarCrossbow.isCharged(itemStack)) {
-            cir.setReturnValue(BipedEntityModel.ArmPose.TOOT_HORN);
+            info.setReturnValue(BipedEntityModel.ArmPose.TOOT_HORN);
         }
     }
 }

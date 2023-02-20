@@ -47,16 +47,15 @@ public class InfernalWarCrossbow extends RangedWeaponItem implements Vanishable 
     public int RANGE;
     private boolean charged = false;
     private boolean loaded = false;
-    private static final float field_30867 = 0.2f;
-    private static final float field_30868 = 0.5f;
     private float DEFAULT_SPEED;
-    private final float FIREWORK_ROCKET_SPEED = 1.6f;
+    private float FIREWORK_ROCKET_SPEED;
 
-    public InfernalWarCrossbow(Item.Settings settings, int pull_time, int range, float speed) {
+    public InfernalWarCrossbow(Item.Settings settings, int pull_time, int range, float speed, float firework_speed) {
         super(settings);
         DEFAULT_PULL_TIME = pull_time;
         RANGE = range;
         DEFAULT_SPEED = speed;
+        FIREWORK_ROCKET_SPEED = firework_speed;
     }
 
     @Override
