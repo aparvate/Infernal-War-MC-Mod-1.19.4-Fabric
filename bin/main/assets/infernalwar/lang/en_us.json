@@ -18,6 +18,8 @@
     "itemGroup.infernalwar.infernalwar_combat": "Infernal War: Combat",
 
     "item.minecraft.piglin_spawn_egg":"Piglin Scavenger Spawn Egg",
+    "item.minecraft.piglin_brute_spawn_egg":"Piglin Scavenger Brute Spawn Egg",
 
-    "entity.minecraft.piglin":"Piglin Scavenger"
+    "entity.minecraft.piglin":"Piglin Scavenger",
+    "entity.minecraft.piglin_brute":"Piglin Scavenger Brute"
   }
