@@ -2,6 +2,7 @@
   "mappings": {
     "net/fabricmc/infernal_war/mixin/PiglinBruteEntityMixin": {
       "initialize": "Lnet/minecraft/class_5419;initialize(Lnet/minecraft/class_5425;Lnet/minecraft/class_1266;Lnet/minecraft/class_3730;Lnet/minecraft/class_1315;Lnet/minecraft/class_2487;)Lnet/minecraft/class_1315;",
+      "createPiglinBruteAttributes": "Lnet/minecraft/class_5419;method_30242()Lnet/minecraft/class_5132$class_5133;",
       "initEquipment": "Lnet/minecraft/class_5419;initEquipment(Lnet/minecraft/class_5819;Lnet/minecraft/class_1266;)V"
     }
   },
@@ -9,6 +10,7 @@
     "named:intermediary": {
       "net/fabricmc/infernal_war/mixin/PiglinBruteEntityMixin": {
         "initialize": "Lnet/minecraft/class_5419;initialize(Lnet/minecraft/class_5425;Lnet/minecraft/class_1266;Lnet/minecraft/class_3730;Lnet/minecraft/class_1315;Lnet/minecraft/class_2487;)Lnet/minecraft/class_1315;",
+        "createPiglinBruteAttributes": "Lnet/minecraft/class_5419;method_30242()Lnet/minecraft/class_5132$class_5133;",
         "initEquipment": "Lnet/minecraft/class_5419;initEquipment(Lnet/minecraft/class_5819;Lnet/minecraft/class_1266;)V"
       }
     }

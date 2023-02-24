@@ -17,7 +17,10 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.InventoryOwner;
 import net.minecraft.entity.SpawnReason;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.AbstractPiglinEntity;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.PiglinBruteEntity;
 import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.item.ItemStack;
@@ -30,7 +33,17 @@ import net.minecraft.util.math.random.*;
 import net.minecraft.util.math.random.Random;
 
 @Mixin(PiglinBruteEntity.class)
-public class PiglinBruteEntityMixin {
+public abstract class PiglinBruteEntityMixin extends AbstractPiglinEntity {
+
+    public PiglinBruteEntityMixin(EntityType<? extends AbstractPiglinEntity> entityType, World world) {
+        super(entityType, world);
+        //TODO Auto-generated constructor stub
+    }
+
+    @Inject(method = "createPiglinBruteAttributes", at = @At("TAIL"))
+    private static DefaultAttributeContainer.Builder createPiglinBruteAttributes(CallbackInfoReturnable info) {
+        return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 25.0).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 7.0);
+    }
 
     private void equipAtChance(EquipmentSlot slot, ItemStack stack, Random random) {
         if (random.nextFloat() < 0.1f) {
