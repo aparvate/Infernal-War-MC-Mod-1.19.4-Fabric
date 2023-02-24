@@ -18,6 +18,7 @@ import com.google.common.graph.ElementOrder.Type;
 import net.fabricmc.infernal_war.common.InfernalWarTrackedData;
 import net.fabricmc.infernal_war.common.access.PiglinTypeVariantInterface;
 import net.fabricmc.infernal_war.common.access.PiglinVariantInterface;
+import net.fabricmc.infernal_war.common.entity.PiglinType;
 import net.fabricmc.infernal_war.common.item.RegisterItems;
 import net.minecraft.client.render.entity.model.PiglinEntityModel;
 import net.minecraft.entity.CrossbowUser;
@@ -48,7 +49,7 @@ import net.minecraft.util.math.random.*;
 import net.minecraft.util.Util;
 
 @Mixin(PiglinEntity.class)
-public abstract class PiglinEntityMixin extends AbstractPiglinEntity{
+public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements VariantHolder<PiglinType>{
     private static final TrackedData<Integer> PIGLIN_TYPE = DataTracker.registerData(PiglinEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public PiglinEntityMixin(EntityType<? extends AbstractPiglinEntity> entityType, World world) {
