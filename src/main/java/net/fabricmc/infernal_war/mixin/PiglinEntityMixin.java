@@ -13,11 +13,10 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.google.common.graph.ElementOrder.Type;
-
 import net.fabricmc.infernal_war.common.InfernalWarTrackedData;
 import net.fabricmc.infernal_war.common.access.PiglinTypeVariantInterface;
 import net.fabricmc.infernal_war.common.access.PiglinVariantInterface;
+import net.fabricmc.infernal_war.common.access.PiglinData;
 import net.fabricmc.infernal_war.common.entity.PiglinType;
 import net.fabricmc.infernal_war.common.item.RegisterItems;
 import net.minecraft.client.render.entity.model.PiglinEntityModel;
@@ -54,6 +53,24 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 
     public PiglinEntityMixin(EntityType<? extends AbstractPiglinEntity> entityType, World world) {
         super(entityType, world);
+    }
+
+    @Inject(method = "initDataTracker", at = @At("TAIL"))
+    private void initVarTracker(CallbackInfo info){
+        ((PiglinEntity)(Object)this).getDataTracker().startTracking(PIGLIN_TYPE, 0);
+    }
+
+    @Inject(method = "initialize", at = @At("TAIL"))
+    private void initializeVariants(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt, CallbackInfoReturnable cir){
+        PiglinType piglinType;
+        Random random = world.getRandom();
+        if (entityData instanceof PiglinData) {
+            piglinType = ((PiglinData)entityData).type;
+        } else {
+            piglinType = Util.getRandom(PiglinType.values(), random);
+            entityData = new PiglinData(piglinType);
+        }
+        this.setVariant(piglinType);
     }
 
     @Shadow
@@ -101,14 +118,5 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 
     public void setVariant(PiglinType piglinType) {
         this.setPiglinType(piglinType.getId()| this.getPiglinType());
-    }
-
-    public static class PiglinData
-    implements EntityData {
-        public final PiglinType type;
-
-        public PiglinData(PiglinType type) {
-            this.type = type;
-        }
     }
 }
