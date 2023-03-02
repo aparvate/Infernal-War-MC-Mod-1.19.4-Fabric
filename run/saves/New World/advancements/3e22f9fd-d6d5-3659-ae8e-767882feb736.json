@@ -1,0 +1,15 @@
+{
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2023-03-02 00:52:58 -0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2023-03-02 00:53:28 -0600"
+    },
+    "done": false
+  },
+  "DataVersion": 3218
+}

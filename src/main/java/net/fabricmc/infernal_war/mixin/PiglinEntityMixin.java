@@ -86,4 +86,29 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
         }
         return new ItemStack(Items.GOLDEN_SWORD);
     }
+
+    private void setPiglinType(int variant) {
+        this.dataTracker.set(PIGLIN_TYPE, variant);
+    }
+
+    private int getPiglinType() {
+        return this.dataTracker.get(PIGLIN_TYPE);
+    }
+
+    public PiglinType getVariant() {
+        return PiglinType.byId(this.getPiglinType());
+    }
+
+    public void setVariant(PiglinType piglinType) {
+        this.setPiglinType(piglinType.getId()| this.getPiglinType());
+    }
+
+    public static class PiglinData
+    implements EntityData {
+        public final PiglinType type;
+
+        public PiglinData(PiglinType type) {
+            this.type = type;
+        }
+    }
 }
