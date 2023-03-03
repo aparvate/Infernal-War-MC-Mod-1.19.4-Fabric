@@ -88,6 +88,16 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
         }
     }
 
+    @Inject(method = "writeCustomDataToNbt", at = @At("TAIL"))
+    public void writeVariantToNbt(NbtCompound nbt, CallbackInfo info){
+        nbt.putInt("piglinSkin", this.getVariant().getId());
+    }
+
+    @Inject(method = "readCustomDataFromNbt", at = @At("TAIL"))
+    public void readVariantFromNbt(NbtCompound nbt, CallbackInfo info){
+        this.setVariant(PiglinType.byId(nbt.getInt("piglinSkin")));
+    }
+
     LocalRandom random = new LocalRandom(RandomSeed.getSeed());
 
     private ItemStack makeInitialWeapon(){

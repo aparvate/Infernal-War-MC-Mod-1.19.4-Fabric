@@ -12,7 +12,8 @@
   "client": [
     "PlayerEntityRendererMixin",
     "HeldItemRendererMixin",
-    "HeadFeatureRendererMixin"
+    "HeadFeatureRendererMixin",
+    "PiglinEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
