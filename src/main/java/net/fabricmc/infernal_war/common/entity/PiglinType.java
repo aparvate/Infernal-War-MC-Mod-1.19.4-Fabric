@@ -10,8 +10,9 @@ import com.mojang.serialization.Codec;
 public enum PiglinType implements StringIdentifiable {
 
     NORMAL(0,"normal"),
-    REDSHAWL(1,"redshawl"),
-    CLOAKED(2,"redshawl");
+    REDSHAWL_1(1,"redshawl_1"),
+    CLOAKED_1(2,"cloaked_1"),
+    SHIRTLESS_1(3,"shirtless_1");
 
     public static final Codec<PiglinType> CODEC;
     private static final IntFunction<PiglinType> BY_ID;

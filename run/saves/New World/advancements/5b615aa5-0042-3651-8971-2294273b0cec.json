@@ -1,0 +1,21 @@
+{
+  "minecraft:recipes/decorations/campfire": {
+    "criteria": {
+      "has_coal": "2023-03-02 20:14:20 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2023-03-02 20:14:20 -0600"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2023-03-02 20:14:23 -0600"
+    },
+    "done": false
+  },
+  "DataVersion": 3218
+}
