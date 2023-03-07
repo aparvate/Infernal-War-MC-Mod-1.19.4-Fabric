@@ -20,14 +20,16 @@ public enum PiglinType implements StringIdentifiable {
     CLOAKED_PINK(2,2,"cloaked_pink"),
     SHIRTLESS_NORMAL(3,0,"shirtless_normal"),
     SHIRTLESS_PALE(3,1,"shirtless_pale"),
-    SHIRTLESS_PINK(3,2,"shirtless_pink");
+    SHIRTLESS_PINK(3,2,"shirtless_pink"),
+    DRIFTER_NORMAL(4,0,"drifter_normal"),
+    DRIFTER_PALE(4,1,"drifter_pale"),
+    DRIFTER_PINK(4,2,"drifter_pink");
 
     public static final Codec<PiglinType> CODEC;
     //private static final IntFunction<PiglinType> BY_ID;
     private final int id;
     private final int skinColor;
     private final String name;
-    public static final int[] skinColorArray = {0,1};
 
     private PiglinType(int id, int skinColor, String name){
         this.id = id;

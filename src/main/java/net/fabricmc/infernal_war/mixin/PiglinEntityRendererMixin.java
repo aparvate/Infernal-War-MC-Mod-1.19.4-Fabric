@@ -72,6 +72,7 @@ public abstract class PiglinEntityRendererMixin{
                 case 1 -> new Identifier("infernalwar", pigScavRandString + fileString + "1.png");
                 case 2 -> new Identifier("infernalwar", pigScavRandString + fileString + "2.png");
                 case 3 -> new Identifier("infernalwar", pigScavRandString + fileString + "3.png");
+                case 4 -> new Identifier("infernalwar", pigScavRandString + fileString + "4.png");
             };
         }
         return piglin;
