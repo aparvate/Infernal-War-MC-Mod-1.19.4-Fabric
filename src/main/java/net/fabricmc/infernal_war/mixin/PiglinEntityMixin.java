@@ -50,6 +50,7 @@ import net.minecraft.util.Util;
 
 @Mixin(PiglinEntity.class)
 public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements VariantHolder<PiglinType>{
+    private static final TrackedData<Integer> PIGLIN_SKIN_COLOR = DataTracker.registerData(PiglinEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Integer> PIGLIN_TYPE = DataTracker.registerData(PiglinEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Integer> PIGLIN_HEAD_FEATURE = DataTracker.registerData(PiglinEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
@@ -59,6 +60,7 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 
     @Inject(method = "initDataTracker", at = @At("TAIL"))
     private void initVarTracker(CallbackInfo info){
+        ((PiglinEntity)(Object)this).getDataTracker().startTracking(PIGLIN_SKIN_COLOR, 0);
         ((PiglinEntity)(Object)this).getDataTracker().startTracking(PIGLIN_TYPE, 0);
         ((PiglinEntity)(Object)this).getDataTracker().startTracking(PIGLIN_HEAD_FEATURE, 0);
     }
@@ -66,13 +68,17 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
     @Inject(method = "initialize", at = @At("TAIL"))
     private void initializeVariants(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt, CallbackInfoReturnable cir){
         PiglinType piglinType;
+        int randomSkinColor;
         Random random = world.getRandom();
         if (entityData instanceof PiglinData) {
             piglinType = ((PiglinData)entityData).type;
+            randomSkinColor = ((PiglinData)entityData).type.getSkinColor();
         } else {
             piglinType = Util.getRandom(PiglinType.values(), random);
+            randomSkinColor = piglinType.getSkinColor();
             entityData = new PiglinData(piglinType);
         }
+        this.setSkinColor(randomSkinColor);
         this.setVariant(piglinType);
     }
 
@@ -93,12 +99,13 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 
     @Inject(method = "writeCustomDataToNbt", at = @At("TAIL"))
     public void writeVariantToNbt(NbtCompound nbt, CallbackInfo info){
+        nbt.putInt("piglinSkinColor", this.getVariant().getSkinColor());
         nbt.putInt("piglinSkin", this.getVariant().getId());
     }
 
     @Inject(method = "readCustomDataFromNbt", at = @At("TAIL"))
     public void readVariantFromNbt(NbtCompound nbt, CallbackInfo info){
-        this.setVariant(PiglinType.byId(nbt.getInt("piglinSkin")));
+        this.setVariant(PiglinType.byId(nbt.getInt("piglinSkin"),nbt.getInt("piglinSkinColor")));
     }
 
     LocalRandom random = new LocalRandom(RandomSeed.getSeed());
@@ -125,6 +132,14 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
         return this.dataTracker.get(PIGLIN_TYPE);
     }
 
+    private void setPiglinSkinColor(int variant) {
+        this.dataTracker.set(PIGLIN_SKIN_COLOR, variant);
+    }
+
+    private int getPiglinSkinColor() {
+        return this.dataTracker.get(PIGLIN_SKIN_COLOR);
+    }
+
     private void setPiglinHeadFeature(int variant) {
         this.dataTracker.set(PIGLIN_HEAD_FEATURE, variant);
     }
@@ -134,7 +149,7 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
     }
 
     public PiglinType getVariant() {
-        return PiglinType.byId(this.getPiglinType());
+        return PiglinType.byId(this.getPiglinType(), this.getPiglinSkinColor());
     }
 
     public PiglinHeadFeature getHeadFeatureVariant() {
@@ -143,5 +158,10 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 
     public void setVariant(PiglinType piglinType) {
         this.setPiglinType(piglinType.getId()| this.getPiglinType());
+        this.setSkinColor(piglinType.getSkinColor()| this.getPiglinSkinColor());
+    }
+
+    public void setSkinColor(int piglinSkinColor) {
+        this.setPiglinSkinColor(piglinSkinColor);
     }
 }

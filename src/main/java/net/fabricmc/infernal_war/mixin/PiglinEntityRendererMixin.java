@@ -49,10 +49,9 @@ public abstract class PiglinEntityRendererMixin{
     public Identifier getTexture(MobEntity mobEntity) {
         Identifier zombiePiglin = new Identifier("textures/entity/piglin/zombified_piglin.png");
         Identifier piglinBrute = new Identifier("textures/entity/piglin/piglin_brute.png");
-        Identifier piglin = new Identifier("infernalwar", "textures/entity/piglin/piglin_scavenger/normal/0.png");
+        Identifier piglin = new Identifier("infernalwar", "textures/entity/piglin/piglin_scavenger/1/0.png");
         String pigScavRandString = "textures/entity/piglin/piglin_scavenger/";
-        String normalSkin = "/normal/";
-        String paleSkin = "/pale/";
+        String fileString;
         if (mobEntity.getType().equals(EntityType.PIGLIN_BRUTE)) {
             return piglinBrute;
         }
@@ -61,12 +60,18 @@ public abstract class PiglinEntityRendererMixin{
         }
         else if (mobEntity.getType().equals(EntityType.PIGLIN)){
             PiglinType piglinType = (PiglinType)((VariantHolder)(Object) mobEntity).getVariant();
+            switch (piglinType.getSkinColor()){
+                default -> throw new IncompatibleClassChangeError();
+                case 0 -> fileString = "0/";
+                case 1 -> fileString = "1/";
+                case 2 -> fileString = "2/";
+            }
             return switch (piglinType.getId()) {
                 default -> throw new IncompatibleClassChangeError();
-                case 0 -> piglin;
-                case 1 -> new Identifier("infernalwar", pigScavRandString + normalSkin + "1.png");
-                case 2 -> new Identifier("infernalwar", pigScavRandString + paleSkin + "2.png");
-                case 3 -> new Identifier("infernalwar", pigScavRandString + paleSkin + "3.png");
+                case 0 -> new Identifier("infernalwar", pigScavRandString + fileString + "0.png");
+                case 1 -> new Identifier("infernalwar", pigScavRandString + fileString + "1.png");
+                case 2 -> new Identifier("infernalwar", pigScavRandString + fileString + "2.png");
+                case 3 -> new Identifier("infernalwar", pigScavRandString + fileString + "3.png");
             };
         }
         return piglin;
