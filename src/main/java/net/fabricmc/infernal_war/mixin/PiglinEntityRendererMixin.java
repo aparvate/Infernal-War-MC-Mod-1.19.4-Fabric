@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.fabricmc.infernal_war.common.access.PiglinVariantInterface;
+import net.fabricmc.infernal_war.common.entity.PiglinHeadFeatureRenderer;
 import net.fabricmc.infernal_war.common.entity.PiglinType;
 import net.fabricmc.infernal_war.common.item.RegisterItems;
 import net.minecraft.entity.CrossbowUser;
@@ -34,8 +35,10 @@ import net.minecraft.util.math.random.*;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.entity.VariantHolder;
 import net.minecraft.client.render.entity.BipedEntityRenderer;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.PiglinEntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory.Context;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.PiglinEntityModel;
 
 import com.google.common.collect.ImmutableMap;
@@ -46,8 +49,10 @@ public abstract class PiglinEntityRendererMixin{
     public Identifier getTexture(MobEntity mobEntity) {
         Identifier zombiePiglin = new Identifier("textures/entity/piglin/zombified_piglin.png");
         Identifier piglinBrute = new Identifier("textures/entity/piglin/piglin_brute.png");
-        Identifier piglin = new Identifier("infernalwar", "textures/entity/piglin/piglin_scavenger/0.png");
+        Identifier piglin = new Identifier("infernalwar", "textures/entity/piglin/piglin_scavenger/normal/0.png");
         String pigScavRandString = "textures/entity/piglin/piglin_scavenger/";
+        String normalSkin = "/normal/";
+        String paleSkin = "/pale/";
         if (mobEntity.getType().equals(EntityType.PIGLIN_BRUTE)) {
             return piglinBrute;
         }
@@ -59,9 +64,9 @@ public abstract class PiglinEntityRendererMixin{
             return switch (piglinType.getId()) {
                 default -> throw new IncompatibleClassChangeError();
                 case 0 -> piglin;
-                case 1 -> new Identifier("infernalwar", pigScavRandString + "1.png");
-                case 2 -> new Identifier("infernalwar", pigScavRandString + "2.png");
-                case 3 -> new Identifier("infernalwar", pigScavRandString + "3.png");
+                case 1 -> new Identifier("infernalwar", pigScavRandString + normalSkin + "1.png");
+                case 2 -> new Identifier("infernalwar", pigScavRandString + paleSkin + "2.png");
+                case 3 -> new Identifier("infernalwar", pigScavRandString + paleSkin + "3.png");
             };
         }
         return piglin;

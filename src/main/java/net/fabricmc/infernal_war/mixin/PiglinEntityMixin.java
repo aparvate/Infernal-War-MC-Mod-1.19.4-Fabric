@@ -17,6 +17,7 @@ import net.fabricmc.infernal_war.common.InfernalWarTrackedData;
 import net.fabricmc.infernal_war.common.access.PiglinTypeVariantInterface;
 import net.fabricmc.infernal_war.common.access.PiglinVariantInterface;
 import net.fabricmc.infernal_war.common.access.PiglinData;
+import net.fabricmc.infernal_war.common.entity.PiglinHeadFeature;
 import net.fabricmc.infernal_war.common.entity.PiglinType;
 import net.fabricmc.infernal_war.common.item.RegisterItems;
 import net.minecraft.client.render.entity.model.PiglinEntityModel;
@@ -50,6 +51,7 @@ import net.minecraft.util.Util;
 @Mixin(PiglinEntity.class)
 public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements VariantHolder<PiglinType>{
     private static final TrackedData<Integer> PIGLIN_TYPE = DataTracker.registerData(PiglinEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Integer> PIGLIN_HEAD_FEATURE = DataTracker.registerData(PiglinEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public PiglinEntityMixin(EntityType<? extends AbstractPiglinEntity> entityType, World world) {
         super(entityType, world);
@@ -58,6 +60,7 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
     @Inject(method = "initDataTracker", at = @At("TAIL"))
     private void initVarTracker(CallbackInfo info){
         ((PiglinEntity)(Object)this).getDataTracker().startTracking(PIGLIN_TYPE, 0);
+        ((PiglinEntity)(Object)this).getDataTracker().startTracking(PIGLIN_HEAD_FEATURE, 0);
     }
 
     @Inject(method = "initialize", at = @At("TAIL"))
@@ -122,8 +125,20 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
         return this.dataTracker.get(PIGLIN_TYPE);
     }
 
+    private void setPiglinHeadFeature(int variant) {
+        this.dataTracker.set(PIGLIN_HEAD_FEATURE, variant);
+    }
+
+    private int getPiglinHeadFeature() {
+        return this.dataTracker.get(PIGLIN_HEAD_FEATURE);
+    }
+
     public PiglinType getVariant() {
         return PiglinType.byId(this.getPiglinType());
+    }
+
+    public PiglinHeadFeature getHeadFeatureVariant() {
+        return PiglinHeadFeature.byIndex(this.getPiglinHeadFeature());
     }
 
     public void setVariant(PiglinType piglinType) {
