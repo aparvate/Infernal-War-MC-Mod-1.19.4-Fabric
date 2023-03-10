@@ -25,7 +25,7 @@ public class RegisterItems {
     public static final ToolItem PIG_IRON_PICKAXE = new InfernalWarPickaxe(PigIronToolMaterial.INSTANCE, 1, -2.8F, new FabricItemSettings().fireproof());
     public static final ToolItem PIG_IRON_AXE = new InfernalWarAxe(PigIronToolMaterial.INSTANCE, 4.5F, -3.1F, new FabricItemSettings().fireproof());
     public static final ToolItem PIG_IRON_HOE = new InfernalWarHoe(PigIronToolMaterial.INSTANCE, 0, -2.4F, new FabricItemSettings().fireproof());
-    public static final InfernalWarCrossbow PIG_IRON_CROSSBOW = new InfernalWarCrossbow(new FabricItemSettings().fireproof(), 40, 6, 4.5F, 1.6F);
+    public static final PigIronCrossbow PIG_IRON_CROSSBOW = new PigIronCrossbow(new FabricItemSettings().fireproof());
     public static final InfernalWarBow PIG_IRON_BOW = new InfernalWarBow(new FabricItemSettings().fireproof(), 40, -1, 2.0, 1F, 3.0f);
 
     public static final Item PIG_IRON_HELMET = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, EquipmentSlot.HEAD, new FabricItemSettings().fireproof());

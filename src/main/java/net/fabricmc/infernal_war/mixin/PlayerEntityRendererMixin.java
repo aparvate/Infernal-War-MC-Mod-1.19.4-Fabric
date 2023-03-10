@@ -29,7 +29,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import net.fabricmc.infernal_war.common.item.InfernalWarCrossbow;
+import net.fabricmc.infernal_war.common.item.PigIronCrossbow;
 import net.fabricmc.infernal_war.common.item.RegisterItems;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.PlayerEntityRenderer;
@@ -42,7 +42,7 @@ public class PlayerEntityRendererMixin {
     @Inject(method = "getArmPose", at = @At("HEAD"), cancellable = true)
     private static void getArmPose(AbstractClientPlayerEntity abstractClientPlayerEntity, Hand hand, CallbackInfoReturnable<BipedEntityModel.ArmPose> info) {
         ItemStack itemStack = abstractClientPlayerEntity.getStackInHand(hand);
-        if (!abstractClientPlayerEntity.handSwinging && itemStack.isOf(RegisterItems.PIG_IRON_CROSSBOW) && InfernalWarCrossbow.isCharged(itemStack)) {
+        if (!abstractClientPlayerEntity.handSwinging && itemStack.isOf(RegisterItems.PIG_IRON_CROSSBOW) && PigIronCrossbow.isCharged(itemStack)) {
             info.setReturnValue(BipedEntityModel.ArmPose.TOOT_HORN);
         }
     }

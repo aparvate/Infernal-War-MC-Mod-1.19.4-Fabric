@@ -13,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import net.fabricmc.fabric.api.client.networking.v1.C2SPlayChannelEvents.Register;
 import net.fabricmc.infernal_war.common.InfernalWarTrackedData;
 import net.fabricmc.infernal_war.common.access.PiglinTypeVariantInterface;
 import net.fabricmc.infernal_war.common.access.PiglinVariantInterface;
@@ -35,10 +36,12 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.AbstractPiglinEntity;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.PiglinActivity;
 import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.entity.passive.RabbitEntity.RabbitType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.item.RangedWeaponItem;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
@@ -56,6 +59,19 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 
     public PiglinEntityMixin(EntityType<? extends AbstractPiglinEntity> entityType, World world) {
         super(entityType, world);
+    }
+
+    @Inject(method = "canUseRangedWeapon", at = @At("TAIL"))
+    public boolean canUsePigIronCrossbow(RangedWeaponItem weapon, CallbackInfoReturnable info) {
+        return weapon == RegisterItems.PIG_IRON_CROSSBOW || weapon == Items.CROSSBOW;
+    }
+
+    @Inject(method = "getActivity", at = @At("TAIL"), cancellable = true)
+    public PiglinActivity getPigIronCrossbowActivity(CallbackInfoReturnable info) {
+        if (this.isAttacking() && this.isHolding(RegisterItems.PIG_IRON_CROSSBOW)) {
+            return PiglinActivity.CROSSBOW_HOLD;
+        }
+        return PiglinActivity.DEFAULT;
     }
 
     @Inject(method = "initDataTracker", at = @At("TAIL"))
@@ -113,7 +129,12 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
     private ItemStack makeInitialWeapon(){
         double randVal = (double)this.random.nextFloat();
         if (randVal <= 0.6) {
-            return new ItemStack(Items.CROSSBOW);
+            randVal = (double)this.random.nextFloat();
+            if (randVal <= 0.6){
+                return new ItemStack(Items.CROSSBOW);}
+            else{
+                return new ItemStack(RegisterItems.PIG_IRON_CROSSBOW);
+            }
         }
         else if (randVal <= 0.7) {
             return new ItemStack(RegisterItems.PIG_IRON_AXE);

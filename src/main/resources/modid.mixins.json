@@ -7,13 +7,17 @@
     "AbstractPiglinEntityMixin",
     "HoglinEntityMixin",
     "PiglinEntityMixin",
-    "PiglinBruteEntityMixin"
+    "PiglinBruteEntityMixin",
+    "PiglinBrainMixin"
   ],
   "client": [
     "PlayerEntityRendererMixin",
     "HeldItemRendererMixin",
     "HeadFeatureRendererMixin",
-    "PiglinEntityRendererMixin"
+    "PiglinEntityRendererMixin",
+    "CrossbowUserMixin",
+    "CrossbowAttackTaskInvokerMixin",
+    "CrossbowAttackTaskMixin"
   ],
   "injectors": {
     "defaultRequire": 1

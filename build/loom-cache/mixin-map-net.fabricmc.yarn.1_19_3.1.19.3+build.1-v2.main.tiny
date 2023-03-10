@@ -1,5 +1,3 @@
 v1	named	intermediary
-FIELD	net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin	F	scaleX	field_24474
-FIELD	net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin	F	scaleY	field_24475
-FIELD	net/fabricmc/infernal_war/mixin/HeadFeatureRendererMixin	F	scaleZ	field_24476
-METHOD	net/fabricmc/infernal_war/mixin/PiglinEntityMixin	(Lnet/minecraft/entity/EquipmentSlot;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/random/Random;)V	equipAtChance	method_24696
+FIELD	net/fabricmc/infernal_war/mixin/CrossbowAttackTaskMixin	I	chargingCooldown	field_22293
+FIELD	net/fabricmc/infernal_war/mixin/CrossbowAttackTaskMixin	Lnet/minecraft/entity/ai/brain/task/CrossbowAttackTask$CrossbowState;	state	field_22294
