@@ -1,3 +1,0 @@
-v1	named	intermediary
-FIELD	net/fabricmc/infernal_war/mixin/CrossbowAttackTaskMixin	I	chargingCooldown	field_22293
-FIELD	net/fabricmc/infernal_war/mixin/CrossbowAttackTaskMixin	Lnet/minecraft/entity/ai/brain/task/CrossbowAttackTask$CrossbowState;	state	field_22294

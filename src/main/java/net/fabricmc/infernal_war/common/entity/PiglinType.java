@@ -25,7 +25,7 @@ public enum PiglinType implements StringIdentifiable {
     DRIFTER_PALE(4,1,"drifter_pale"),
     DRIFTER_PINK(4,2,"drifter_pink");
 
-    public static final Codec<PiglinType> CODEC;
+    public static final net.minecraft.util.StringIdentifiable.Codec<PiglinType> CODEC;
     //private static final IntFunction<PiglinType> BY_ID;
     private final int id;
     private final int skinColor;

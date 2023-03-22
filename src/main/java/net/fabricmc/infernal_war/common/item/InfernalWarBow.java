@@ -46,7 +46,7 @@ public class InfernalWarBow extends RangedWeaponItem implements Vanishable {
         }
         PlayerEntity playerEntity = (PlayerEntity)user;
         boolean bl = playerEntity.getAbilities().creativeMode || EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0;
-        ItemStack itemStack = playerEntity.getArrowType(stack);
+        ItemStack itemStack = playerEntity.getProjectileType(stack);
         if (itemStack.isEmpty() && !bl) {
             return;
         }
@@ -114,7 +114,7 @@ public class InfernalWarBow extends RangedWeaponItem implements Vanishable {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         boolean bl;
         ItemStack itemStack = user.getStackInHand(hand);
-        boolean bl2 = bl = !user.getArrowType(itemStack).isEmpty();
+        boolean bl2 = bl = !user.getProjectileType(itemStack).isEmpty();
         if (user.getAbilities().creativeMode || bl) {
             user.setCurrentHand(hand);
             return TypedActionResult.consume(itemStack);

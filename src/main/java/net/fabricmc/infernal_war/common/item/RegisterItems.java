@@ -12,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolItem;
+import net.minecraft.item.ArmorItem.Type;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -28,10 +29,10 @@ public class RegisterItems {
     public static final PigIronCrossbow PIG_IRON_CROSSBOW = new PigIronCrossbow(new FabricItemSettings().fireproof().maxCount(1));
     public static final InfernalWarBow PIG_IRON_BOW = new InfernalWarBow(new FabricItemSettings().fireproof().maxCount(1), 40, -1, 2.0, 1F, 3.0f);
 
-    public static final Item PIG_IRON_HELMET = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, EquipmentSlot.HEAD, new FabricItemSettings().fireproof());
-    public static final Item PIG_IRON_CHESTPLATE = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, EquipmentSlot.CHEST, new FabricItemSettings().fireproof());
-    public static final Item PIG_IRON_LEGGINGS = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, EquipmentSlot.LEGS, new FabricItemSettings().fireproof());
-    public static final Item PIG_IRON_BOOTS = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, EquipmentSlot.FEET, new FabricItemSettings().fireproof());
+    public static final Item PIG_IRON_HELMET = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, Type.HELMET, new FabricItemSettings().fireproof());
+    public static final Item PIG_IRON_CHESTPLATE = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, Type.CHESTPLATE, new FabricItemSettings().fireproof());
+    public static final Item PIG_IRON_LEGGINGS = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, Type.LEGGINGS, new FabricItemSettings().fireproof());
+    public static final Item PIG_IRON_BOOTS = new ArmorItem(InfernalWarArmorMaterials.PIG_IRON, Type.BOOTS, new FabricItemSettings().fireproof());
 
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier("infernalwar", "pig_iron"), PIG_IRON);

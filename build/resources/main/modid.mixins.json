@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.fabricmc.infernal_war.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractPiglinEntityMixin",
+    "HoglinEntityMixin",
+    "PiglinEntityMixin",
+    "PiglinBruteEntityMixin",
+    "PiglinBrainMixin"
+  ],
+  "client": [
+    "PlayerEntityRendererMixin",
+    "HeldItemRendererMixin",
+    "HeadFeatureRendererMixin",
+    "PiglinEntityRendererMixin",
+    "CrossbowUserMixin",
+    "CrossbowAttackTaskInvokerMixin",
+    "CrossbowAttackTaskMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

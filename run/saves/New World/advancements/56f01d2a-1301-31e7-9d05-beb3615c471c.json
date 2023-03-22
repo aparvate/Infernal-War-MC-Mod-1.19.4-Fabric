@@ -1,9 +1,0 @@
-{
-  "minecraft:nether/explore_nether": {
-    "criteria": {
-      "minecraft:crimson_forest": "2023-03-21 16:14:39 -0500"
-    },
-    "done": false
-  },
-  "DataVersion": 3218
-}
