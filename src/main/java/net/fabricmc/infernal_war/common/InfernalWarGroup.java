@@ -1,22 +1,18 @@
 package net.fabricmc.infernal_war.common;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.infernal_war.common.item.RegisterItems;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class InfernalWarGroup {
-    private static final ItemGroup INFERNALWAR_INGREDIENTS = FabricItemGroup.builder(new Identifier("infernalwar", "infernalwar_ingredients"))
-	.icon(() -> new ItemStack(RegisterItems.PIG_IRON))
-	.build();
-	private static final ItemGroup INFERNALWAR_TOOLS_AND_UTILITIES = FabricItemGroup.builder(new Identifier("infernalwar", "infernalwar_tools"))
-	.icon(() -> new ItemStack(RegisterItems.PIG_IRON_PICKAXE))
-	.build();
-	private static final ItemGroup INFERNALWAR_COMBAT = FabricItemGroup.builder(new Identifier("infernalwar", "infernalwar_combat"))
-	.icon(() -> new ItemStack(RegisterItems.PIG_IRON_SCIMITAR))
-	.build();
+    public static final RegistryKey<ItemGroup> INFERNALWAR_INGREDIENTS = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("infernalwar", "infernalwar_ingredients"));
+	
+	public static final RegistryKey<ItemGroup> INFERNALWAR_TOOLS_AND_UTILITIES = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("infernalwar", "infernalwar_tools"));
+
+	public static final RegistryKey<ItemGroup> INFERNALWAR_COMBAT = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("infernalwar", "infernalwar_combat"));
 
     public static void modifyEntryEvents(){
         ItemGroupEvents.modifyEntriesEvent(INFERNALWAR_INGREDIENTS).register(content -> {

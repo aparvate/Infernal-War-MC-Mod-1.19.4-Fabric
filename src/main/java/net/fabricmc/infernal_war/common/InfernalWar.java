@@ -1,7 +1,13 @@
 package net.fabricmc.infernal_war.common;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.infernal_war.common.item.RegisterItems;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,11 +20,23 @@ public class InfernalWar implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
 		RegisterItems.register();
 		InfernalWarGroup.modifyEntryEvents();
+		
+		Registry.register(Registries.ITEM_GROUP, InfernalWarGroup.INFERNALWAR_COMBAT, FabricItemGroup.builder()
+       	.icon(() -> new ItemStack(RegisterItems.PIG_IRON_AXE))
+       	.displayName(Text.translatable("itemGroup.infernalwar.infernalwar_combat"))
+       	.build()); // build() no longer registers by itself
+
+		Registry.register(Registries.ITEM_GROUP, InfernalWarGroup.INFERNALWAR_TOOLS_AND_UTILITIES, FabricItemGroup.builder()
+       	.icon(() -> new ItemStack(RegisterItems.PIG_IRON_PICKAXE))
+       	.displayName(Text.translatable("itemGroup.infernalwar.infernalwar_tools"))
+       	.build()); // build() no longer registers by itself
+
+		Registry.register(Registries.ITEM_GROUP, InfernalWarGroup.INFERNALWAR_INGREDIENTS, FabricItemGroup.builder()
+       	.icon(() -> new ItemStack(RegisterItems.PIG_IRON))
+       	.displayName(Text.translatable("itemGroup.infernalwar.infernalwar_ingredients"))
+       	.build()); // build() no longer registers by itself
 
 		LOGGER.info("The Piglins will rise...");
 	}

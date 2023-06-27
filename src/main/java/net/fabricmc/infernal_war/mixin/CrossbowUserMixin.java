@@ -40,12 +40,12 @@ public abstract interface CrossbowUserMixin extends RangedAttackMob {
         if (entity.isHolding(Items.CROSSBOW)) {
             hand = ProjectileUtil.getHandPossiblyHolding(entity, Items.CROSSBOW);
             itemStack = entity.getStackInHand(hand);
-            CrossbowItem.shootAll(entity.world, entity, hand, itemStack, speed, 14 - entity.world.getDifficulty().getId() * 4);
+            CrossbowItem.shootAll(entity.getWorld(), entity, hand, itemStack, speed, 14 - entity.getWorld().getDifficulty().getId() * 4);
         } 
         if (entity.isHolding(RegisterItems.PIG_IRON_CROSSBOW)) {
             hand = ProjectileUtil.getHandPossiblyHolding(entity, RegisterItems.PIG_IRON_CROSSBOW);
             itemStack = entity.getStackInHand(hand);
-            PigIronCrossbow.shootAll(entity.world, entity, hand, itemStack, speed + 2F, 14 - entity.world.getDifficulty().getId() * 4);
+            PigIronCrossbow.shootAll(entity.getWorld(), entity, hand, itemStack, speed + 2F, 14 - entity.getWorld().getDifficulty().getId() * 4);
         }
         ((CrossbowUser)(Object)this).postShoot();
     }

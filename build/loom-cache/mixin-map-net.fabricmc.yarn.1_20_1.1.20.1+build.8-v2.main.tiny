@@ -1,0 +1,2 @@
+v1	named	intermediary
+METHOD	net/fabricmc/infernal_war/mixin/CrossbowUserMixin	(Lnet/minecraft/entity/LivingEntity;F)V	shoot	method_24654
